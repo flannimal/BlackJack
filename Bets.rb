@@ -8,10 +8,21 @@ class Bets
 		@bet = 5   									#array
 	end
 
+	def wager
+			puts "What's your wager?"
+			@bet = gets.chomp.to_i
+			if @bet > @chips || @bet < 0
+				puts "Not a valid wager.  Please re-bet:  "
+				return wager
+			else
+			end
+	end
+
 	def sit_at_table
-		while true == true
+		while @chips > 0
 			show_balance
 			gameA = Single_Hand.new
+			wager
 			result = gameA.play_game
 			update_balance(result)
 		end

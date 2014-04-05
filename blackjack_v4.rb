@@ -74,7 +74,6 @@ class Single_Hand
 		return sum
 	end
 
-
 	def deal()
 		card1 = rand(12)
 		card2 = rand(12)
